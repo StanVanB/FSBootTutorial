@@ -260,7 +260,8 @@
             case (x > 100):
                 console.log(x + " is greater than 100");
                 break;
-
+            default:
+                console.log("No match");
         }
 
        

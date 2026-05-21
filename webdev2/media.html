@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Media Queries</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+            a:hover {
+                color: green;
+                background-color: black;
+            }
+
+            /*@media only screen {
+                body {
+                    background-color: yellow;
+                }
+            }
+
+            @media only print {
+                html,
+                body {
+                    background-color: red;
+                    min-height: 100%;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                }
+            }*/
+
+            /* all mobile devices */
+            @media only screen and (max-width: 600px) {
+                body {
+                    background-color: yellow;
+                }
+            }
+
+            /* for all tablets */
+            @media only screen and (min-width: 601px) {
+                body {
+                    background-color: red;
+                }
+            }
+
+            /* for all desktops */
+            @media only screen and (min-width: 768px) {
+                body {
+                    background-color: green;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Media Queries</h1>
+
+        <a href="https://www.google.com" target="_blank">
+            <img src="https://aldianews.com/sites/default/files/2025-09/google_silhouettes_highlighted_1280%20%281%29.png" alt="Google Image">  
+        </a>
+    </body>
+</html>

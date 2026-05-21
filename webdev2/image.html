@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Image</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mobile.css" media="(max-width: 767px)">
+        <link rel="stylesheet" href="tablet.css" media="(min-width: 768px) and (max-width: 1024px)">
+        <link rel="stylesheet" href="desktop.css" media="(min-width: 1025px)">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto; /* Centers the image if it's smaller than the container */
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>Responsive Image</h2>
+            <p>This is a responsive image that adapts to different screen sizes.</p>
+            <img src="https://aldianews.com/sites/default/files/2025-09/google_silhouettes_highlighted_1280%20%281%29.png" alt="Google Silhouettes" loading="lazy">
+        </main>
+    </body>
+</html>

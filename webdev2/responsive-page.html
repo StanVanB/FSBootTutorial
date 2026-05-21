@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            main {
+                width: 90%;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .responsive-image {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 767px) {
+                body {
+                    background-color: rgb(224, 157, 157);
+                }
+
+                main {
+                    width: 100%;
+                    padding: 12px;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                body {
+                    background-color: rgb(2, 255, 2);
+                }
+            }
+
+            @media (min-width: 1025px) {
+                body {
+                    background-color: rgb(145, 214, 236);
+                }
+            }
+
+            @media (orientation: portrait) {
+                body {
+                    background-color: yellow;
+                }
+            }
+
+            @media (orientation: landscape) and (max-width: 767px) {
+                body {
+                    background-color: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Responsive Page</h1>
+            <p>
+                This is a paragraph
+            </p>
+
+            <p>
+                This is another paragraph
+            <img class="responsive-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8Ne4j_5gRNNikzu_KZRIyzSihAQ74KAbiQ&s" alt="Responsive image">
+
+            
+            </p>
+        </main>
+    </body>
+</html>

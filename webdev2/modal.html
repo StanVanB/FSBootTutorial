@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Homework</title>
+</head>
+
+<body>
+
+    <button id="openModal">Open Modal</button>
+
+    <div id="modal" style="display:none; border:1px solid black; padding:20px; width:300px;">
+
+        <h2>
+            Customer Information
+            <button id="closeX">X</button>
+        </h2>
+
+        <label>Name:</label><br>
+        <input type="text"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password"><br><br>
+
+        <button>Submit</button>
+        <button id="closeBtn">Close</button>
+
+    </div>
+
+    <script>
+
+        var modal = document.getElementById("modal");
+        var openModal = document.getElementById("openModal");
+        var closeX = document.getElementById("closeX");
+        var closeBtn = document.getElementById("closeBtn");
+
+        openModal.onclick = function() {
+            modal.style.display = "block";
+        };
+
+        closeX.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+    </script>
+
+</body>
+</html>

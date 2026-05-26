@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Advance CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        .flex-container{
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            flex-direction: row;
+            background-color: gray;
+        }
+        @media screen and (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <body>
+        <h1>CSS Flexbox Layout</h1>
+        <div class="flex-container">
+            <div>Home</div>
+            <div>About</div>
+            <div>Services</div>
+        </div>
+    </body>
+</html>

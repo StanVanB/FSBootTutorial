@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advance CSS</title>
+    </head>
+    <style>
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        img {
+            float: right;
+        }
+        .fixed{
+            position: fixed;
+            top: 50px;
+            left: 100px;
+            height: 600px;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .relative{
+            position: relative;
+            top: 50px;
+            left: 200px;
+            height: 600px;
+            background-color: green;
+            border: 2px solid black;            
+        }
+        .absolute{
+            position: absolute;
+            top: 50px;
+            left: 34px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .absolute1{
+            position: absolute;
+            top: 150px;
+            left: 34px;
+            height: 80px;
+            background-color: purple;
+            border: 2px solid black;
+        }
+        .absolute2{
+            position: absolute;
+            top: 250px;
+            left: 587px;
+            height: 80px;
+            background-color: pink;
+            border: 2px solid black;
+        }
+        .absolute3{
+            position: absolute;
+            top: 350px;
+            left: 367px;
+            height: 28px;
+            background-color: cyan;
+            border: 2px solid black;
+        }
+        .sticky{
+            position: sticky;
+            top: 0;
+            padding:100px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+        .sticky:nth-child(3){
+            background-color: yellow;
+        }
+        Apply z-index to the elements to control their stacking order. The element with a higher z-index will be displayed in front of the element with a lower z-index.
+         .fixed {
+            z-index: 1;
+        }
+        .relative {
+            z-index: 2;
+        }
+        .absolute {
+            z-index: 3;
+        }
+        .absolute1 {
+            z-index: 4;
+        }
+        .absolute2 {
+            z-index: 5;
+        }
+        .absolute3 {
+            z-index: 6;
+        }
+         .sticky {
+            z-index: 7;
+        }
+    </style>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About Me</li>
+            <li>Contact</li>
+        </ul>
+        <div class="fixed">This is a fixed element.</div>
+        <div class="relative">This is a relative element.
+            <div class="absolute">This is an absolute element.</div>
+            <div class="absolute1">This is another absolute element.</div>
+            <div class="absolute2">This is another absolute element.</div>
+            <div class="absolute3">This is another absolute element.</div>
+        </div>
+        <div class="sticky">This is a sticky element.</div>
+        <div style="padding-bottom: 500px;"></div>
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" style="width:300px">
+    </body>
+</html>

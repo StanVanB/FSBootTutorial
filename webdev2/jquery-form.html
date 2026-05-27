@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('form').submit(function(event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+
+                    console.log('Form submitted', name, email, password);
+
+                    $("#nameError").hide();
+                    $("#emailError").hide();
+                    $("#passwordError").hide();
+
+                    if(name === "" && email === "" && password === ""){
+                        $("#nameError").show();
+                        $("#emailError").show();
+                        $("#passwordError").show();
+                    } else if(name === ""){
+                        $("#nameError").show();
+                    } else if(email === ""){
+                        $("#emailError").show();
+                    } else if(password === ""){
+                        $("#passwordError").show();
+                    } else {
+                        alert("Form submitted successfully");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Sign Up</h1>
+
+        <form id="loginForm" action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span id="nameError" style="color: red; display: none;">Name is required</span>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" style="color: red; display: none;">Email is required</span>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" style="color: red; display: none;">Password is required</span>
+            <br><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </body>
+</html>

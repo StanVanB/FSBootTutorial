@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation Homework</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #eef2f7;
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form-box {
+                background-color: white;
+                width: 360px;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            }
+
+            h1 {
+                text-align: center;
+                margin-top: 0;
+                color: #243447;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px;
+                box-sizing: border-box;
+                border: 1px solid #b8c2cc;
+                border-radius: 5px;
+                font-size: 15px;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: #2f80ed;
+            }
+
+            input[type="submit"] {
+                background-color: #2f80ed;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #1c65c9;
+            }
+
+            span {
+                display: block;
+                margin-top: 6px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-box">
+            <h1>Sign Up</h1>
+
+            <form id="signupForm" action="">
+                <input type="text" id="name" placeholder="Enter your name">
+                <span id="nameError" style="color: red; display: none;">Name is required</span>
+                <br><br>
+
+                <input type="email" id="email" placeholder="Enter your email">
+                <span id="emailError" style="color: red; display: none;">Email is required</span>
+                <br><br>
+
+                <input type="password" id="password" placeholder="Enter your password">
+                <span id="passwordError" style="color: red; display: none;">Password is required</span>
+                <br><br>
+
+                <input type="submit" value="Submit" onClick="submitForm(event)">
+            </form>
+        </div>
+
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+
+                var nameError = document.getElementById("nameError");
+                var emailError = document.getElementById("emailError");
+                var passwordError = document.getElementById("passwordError");
+
+                nameError.style.display = "none";
+                emailError.style.display = "none";
+                passwordError.style.display = "none";
+
+                if (name == "") {
+                    nameError.style.display = "inline";
+                }
+
+                if (email == "") {
+                    emailError.style.display = "inline";
+                }
+
+                if (password == "") {
+                    passwordError.style.display = "inline";
+                }
+
+                if (name != "" && email != "" && password != "") {
+                    alert("Form submitted successfully!");
+                }
+            }
+        </script>
+    </body>
+</html>

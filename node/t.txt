@@ -1,0 +1,7 @@
+//explain about package.json and nodemon, node_modules, npm install, npm init, gitignore
+// package.json: stores project information, scripts, and dependencies.
+// nodemon: restarts the Node.js app automatically when files change.
+// node_modules: folder where installed npm packages are stored.
+// npm install: installs packages for the project.
+// npm init: creates a package.json file.
+// .gitignore: tells Git which files or folders to ignore, like node_modules.

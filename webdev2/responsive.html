@@ -1,35 +1,52 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Responsive Page</title>
-        <style>
-            .parent {
-                font-size: 14px;
-            }
-
-            .child {
-                font-size: 2em;            
-            }
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        </style>
+        <title>Responsive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <!--  Add -->
+      <!-- Create a new page 
+      Add an image, heading and 2 paragraphs to the page
+      Make them responsive. Feel free to use responsive design or media queries. -->
+    <style>
+        .parent {
+            font-size: 14px;
+        }
+        .child {
+            font-size: 2em;
+        }
+        img{
+            /* vw = viewport width 
+            vh = viewport height */
+            width:50vw;
+            height: 50vh;
+        }
+        p {
+            font-size: 5vw;
+        }
+
+        @media(orientation: portrait) and (max-width: 767px) {
+            body {
+                background-color: yellow;
+            }
+        }
+        @media(orientation: landscape) and (min-width: 768px) {
+            body {
+                background-color: red;
+            }
+        }
+    </style>
     <body>
         <div class="parent">
             This is a parent element.
         </div>
         <div class="child">
             This is a child element.
-        </div>
-        <div class="child">
+            <div class="child">
             This is a child element.
         </div>
-
-        
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8Ne4j_5gRNNikzu_KZRIyzSihAQ74KAbiQ&s" alt="Responsive image">
-        
-    </body>        
+        </div>
+        <p>This is a paragraph.</p>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/671/177/small/tiger-amazing-background-hd-wallpaper-photo.jpeg"
+        alt="Image not found">
+    </body>
 </html>

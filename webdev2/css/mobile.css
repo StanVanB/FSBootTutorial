@@ -1,0 +1,10 @@
+    @media (max-width: 767px) {
+        .styling {
+            color: red;
+            font-size: 16px;
+        }
+
+        body {
+            font-size: 14px;
+        }
+    }

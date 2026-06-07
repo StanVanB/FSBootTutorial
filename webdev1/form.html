@@ -5,32 +5,32 @@
 <body>
     <h1>User Form</h1>
     <form action="submission.php" method="GET">
-
         <label for="name">Name:</label>
-        <input type="text" name="full_name" >
+        <input type="text" name="full_name" value="Sam">
 
         <label for="email">Email:</label>
-        <input type="email" name="email">
+        <input type="email" name="email" 
+        placeholder="harsh@gmail.com">
 
         <label for="password">Password:</label>
         <input type="password" name="password">
 
-        <!-- <label for="gender">Gender:</label>
+        <label for="gender">Gender</label>
         <select name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>          
-        </select> -->
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+        </select>
 
-        <label for="gender">Gender:</label>
-        <input type="radio" name="gender" value="male">
-        <label for="gender">Male</label>
-        <input type="radio" name="gender" value="female">
-        <label for="gender">Female</label>
-
+        <label for="gender">Radio Example</label>
+        <input type="radio" name="radio_button_gender" value="male">Male
+        <input type="radio" name="radio_button_gender" value="female">Female
 
         <input type="submit" value="Submit">
-
     </form>
-
 </body>
 </html>
+
+<!-- Create a new HTML page. Name it pet.html
+Include 4 input fields pet id, your name, 
+phone number, and email.
+Use method GET and submit the form to pet.php page. -->

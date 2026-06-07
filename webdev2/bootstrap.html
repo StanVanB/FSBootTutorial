@@ -1,41 +1,76 @@
 <html>
-    <head>
-        <title>Bootstrap</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-        <style>
-            .mobile-full-img {
-                max-width: 400px;
-                width: 100%;
-            }
 
-            @media (max-width: 576px) {
-                .mobile-full-img {
-                    max-width: 100%;
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-    <body class="bg-success">
-        <div class="container bg-light">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<head>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+    <div class="container bg-light">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <div class="container-fluid">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="./bootstrap.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./responsive.html">Responsive</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./media.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./skills.html">Skills</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./bootstrap.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./responsive.html">Responsive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./media.html">Media</a>
+                    </li>
                 </ul>
-            </nav>            
-            <h1 class="text-danger bg-info text-center">Bootstrap</h1>
-            <img src="https://www.w3schools.com/bootstrap5/paris.jpg" class="img-fluid mobile-full-img rounded mx-auto d-block" alt="Cinque Terre">
-            <div class="alert alert-success">
-                <strong>Success!</strong> This alert box could indicate a successful or positive action.
             </div>
-            <p class="text-success bg-warning">This is a paragraph.</p>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button class="btn btn-secondary">Cancel</button>
+        </nav>
+        <h1 class="text-primary text-uppercase bg-info text-center">Bootstrap</h1>
+        <div class="alert alert-warning">
+            This is my alert message.
+        </div>
+        
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            Your changes are saved!
         </div>
 
-    </body>
+        <img class="img-fluid"  src="https://static.vecteezy.com/system/resources/thumbnails/049/671/177/small/tiger-amazing-background-hd-wallpaper-photo.jpeg"
+        alt="Image not found">
+        
+        <table class="table table-striped table-bordered table-hover"> 
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-secondary">Cancel</button>
+    </div>
+
+
+    <!-- make sure to explain about !important -->
+</body>
+
 </html>

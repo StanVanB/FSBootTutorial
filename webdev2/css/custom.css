@@ -1,0 +1,23 @@
+.img-fluid {
+    width: 100%;
+}
+
+.progress {
+    height: 30px;
+    margin:20px 0;
+}
+
+.skill{
+    color: var(--heading-color);
+    padding: 0;
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: var(--heading-font);
+}
+
+.val {
+    float: right;
+    font-style: normal;
+}

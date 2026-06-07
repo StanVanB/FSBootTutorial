@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        // jQuery code will go here
+        $(document).ready(function () {
+            //selectors
+            //get element by id
+            $('#demo').text("Hello, jQuery!");
+
+            //get element by class name
+            $('.myClass').text("This is updated text for myClass div");
+
+            //get element by tag name
+            $('span').text("This is updated text for all paragraphs");
+
+            $('#text').text('<h2>This is update 1</h2>');
+            $('.text').html('<h2>This is update 2</h2>');
+
+            //one css change
+            $('p').css('color', 'blue');
+
+            //multiple css change
+            $('p').css({
+                'background-color': 'yellow',
+                'font-size': '20px',
+            });
+
+            $('#text').addClass('myStyle');
+
+            $('span').removeClass('myClass');
+
+            $('#close').click(function () {
+                $('p').hide();
+                $('img').hide();
+            });
+
+            $('#open').click(function () {
+                $('p').show().fadeIn(9000);
+                $('img').show().fadeIn(9000);
+                $('#div1').fadeIn("slow");
+                $('#div2').fadeIn(9000);
+            });
+
+        });
+    </script>
+</head>
+<style>
+    .myStyle {
+        color: green;
+        background-color: pink;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <h1>jQuery</h1>
+    <p>This is a simple HTML page to demonstrate basic jQuery functionality.</p>
+    <p id="demo">Paragraph with ID "demo".</p>
+    <div class="myClass">Div with class "myClass."</div>
+    <span class="myClass">Span with class "myClass."</span>
+    <div id="text">This is my text</div>
+    <div>This is my class text</div>
+    <img id="lionImage"
+        src="https://static.vecteezy.com/system/resources/thumbnails/049/671/177/small/tiger-amazing-background-hd-wallpaper-photo.jpeg"
+        alt="Image not found">
+    <div>
+        <button id="close">Close Paragraphs</button>
+        <button id="open">Open Paragraphs</button>
+    </div>
+
+    <div id="div1" style="width:400px; height:400px; background-color: red;display:none;"></div>
+    <div id="div2" style="width:400px; height:400px; background-color: green;display:none;"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+Windows:
+Ctrl + N -> to Create a new file
+Ctrl + C -> to Copy 
+Ctrl + V -> to paste
+Ctrl + / -> to add comments
+Ctrl + R -> to reload the browser
+
+Mac
+Cmd + N -> to Create a new file
+Cmd + C -> to Copy 
+Cmd + V -> to paste
+Cmd + / -> to add comments
+Cmd + R -> to reload the browser
+
+explain about branches
+ // map, filter. 
+//show input validation using required
+// show how the use of !important

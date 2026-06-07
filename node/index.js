@@ -1,8 +1,8 @@
-console.log('Hello, World!');
+// console.log('Hello, World!');
 
 function greet(name) {
-    console.log('Hello, ' + name + "! How are you?");
-    
+    console.log('Hello, ' + name + " How are you?");
+    console.log(`Hello, ${name} How are you?`)
 }
 
 greet('Alice');
@@ -22,6 +22,7 @@ greet('Bob');
 // name = 'Dave'; // This will cause an error because 'name' is a constant variable.
 // console.log(name);
 
+
 var age = 30;
 
 function displayAge() {
@@ -30,6 +31,8 @@ function displayAge() {
 }
 
 console.log('Outside the function: ' + age); // Output: 30
-console.log('Outside the function: ' + city); // Output: New York
+// console.log('Outside the function: ' + city); // Output: New York
 displayAge(); // Output: Inside the function: 25
 console.log('Outside the function: ' + age); // Output: 25
+
+

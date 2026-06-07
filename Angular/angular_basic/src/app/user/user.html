@@ -1,0 +1,14 @@
+<h1>User Component</h1>
+
+<p>username: {{ userName }}</p>
+<div>
+    Property Binding example: <input type="text" [value]="userName">
+</div>
+<div>
+    Property Binding using ngModelexample:<input type="text" [ngModel]="userName">
+</div>
+<div>
+    Two way data binding:<input type="text" [(ngModel)]="userName">
+</div>
+
+<button (click)="updateUserName()">Set Username to John Doe</button>

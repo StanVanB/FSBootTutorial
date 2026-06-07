@@ -1,0 +1,11 @@
+    /* --- 2. TABLETS (768px to 1024px) --- */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        img {
+            max-width: 600px;
+        }
+
+        .styling {
+            color: blue;
+            font-size: 22px;
+        }
+    }

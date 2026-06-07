@@ -1,112 +1,93 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>Advance CSS</title>
-        <style>
-            li {
-                display: inline-block;
-                margin-right: 20px;
-            }
-            img {
-                float: right;
-            }
-            .fixed{
-                position: fixed;
-                top: 50px;
-                left: 100px;
-                height: 600px;
-                background-color: red;
-                border: 2px solid black;
-            }
-            .relative{
-                position: relative;
-                top: 50px;
-                left: 200px;
-                height: 600px;
-                background-color: green;
-                border: 2px solid black;
-            }
-            .absolute{
-                position: absolute;
-                top: 50px;
-                left: 34px;
-                height: 80px;
-                background-color: blue;
-                border: 2px solid black;
-            }
-            .absolute1{
-                position: absolute;
-                top: 150px;
-                left: 34px;
-                height: 80px;
-                background-color: purple;
-                border: 2px solid black;
-            }
-            .absolute2{
-                position: absolute;
-                top: 250px;
-                left: 587px;
-                height: 80px;
-                background-color: pink;
-                border: 2px solid black;
-            }
-            .absolute3{
-                position: absolute;
-                top: 350px;
-                left: 367px;
-                height: 28px;
-                background-color: cyan;
-                border: 2px solid black;
-            }
-            .sticky{
-                position: sticky;
-                top: 0;
-                padding: 100px;
-                background-color: orange;
-                border: 2px solid black;
-            }
-            .sticky:nth-child(3){
-                background-color: yellow;
-            }
-            /* Apply z-index to control stacking order. Higher z-index displays in front. */
-            .fixed {
-                z-index: 1;
-            }
-            .relative {
-                z-index: 2;
-            }
-            .absolute {
-                z-index: 3;
-            }
-            .absolute1 {
-                z-index: 4;
-            }
-            .absolute2 {
-                z-index: 5;
-            }
-            .absolute3 {
-                z-index: 6;
-            }
-            .sticky {
-                z-index: 7;
-            }
-        </style>
+   <head>
+    <title>Advance CSS</title>
     </head>
-    <body>
-        <ul>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Contact</li>
-        </ul>
-        <div class="fixed">This is a fixed element.</div>
-        <div class="relative">This is a relative element.
-            <div class="absolute">This is an absolute element.</div>
-            <div class="absolute1">This is another absolute element.</div>
-            <div class="absolute2">This is another absolute element.</div>
-            <div class="absolute3">This is another absolute element.</div>
+    <style>
+        li {
+            display:inline;
+            background-color: yellow;
+        }
+        img {
+            float: right;
+        }
+        .fixed{
+            position: fixed;
+            top: 50px;
+            left: 100px;
+            height: 600px;
+            background-color: red;
+            border: 2px solid black;
+        }
+        .relative{
+            position: relative;
+            top: 50px;
+            left: 200px;
+            height: 600px;
+            background-color: green;
+            border: 2px solid black;
+        }
+        .absolute{
+            position: absolute;
+            top: 50px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .abs{
+            left: 50px;
+        }
+        .absolute1{
+            left: 280px;
+        }
+        .absolute2{
+            right: 480px;
+        }
+        .absolute3{
+            right: 220px;
+        }
+        .sticky{
+            position:sticky;
+            top: 0;
+            padding:50px;
+            background-color: orange;
+            border: 2px solid black;
+        }
+    </style>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About Me</li>
+        <li>Contact</li>
+    </ul>
+    <div class="fixed">
+        This is a fixed element.
+    </div>
+
+    <div class="relative">
+        This is a relative element.
+        <div class="absolute abs">
+            This is an absolute element.
         </div>
-        <div class="sticky">This is a sticky element.</div>
-        <div style="padding-bottom: 500px;"></div>
-        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Avatar" style="width:300px">
-    </body>
+        <div class="absolute absolute1">
+            This is an absolute element.
+        </div>
+        <div class="absolute absolute2">
+            This is an absolute element.
+        </div>
+        <div class="absolute absolute3">
+            This is an absolute element.
+        </div>
+    </div>
+
+    <div class="sticky">
+        This is a sticky element.
+    </div>
+
+    <div style="padding-bottom: 500px;"></div>
+    
+
+
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/049/671/177/small/tiger-amazing-background-hd-wallpaper-photo.jpeg"
+        alt="Image not found">
+</body>
 </html>

@@ -30,8 +30,7 @@ app.get('/', async (req, res) => {
 app.get('/:id', async (req, res) => {
     const employeeId = req.params.id;
 
-    try {
-        // findByPk searches using the model's primary key field.
+    try {        
         const employee = await Employee.findByPk(employeeId);
         if (!employee) {
             return res.status(404).json({ error: 'Employee not found' });

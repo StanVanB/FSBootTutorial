@@ -1,44 +1,44 @@
-<h1>App Component</h1>
-<!-- Interpolation -->
-<div>
-  <img src="{{imageUrl}}" alt="Angular Logo" width="200" height="200">
-</div>
+<app-navbar></app-navbar>
 
-<!-- Property binding -->
-<div>
-  <img [src]="imageUrl" alt="Angular Logo" width="200" height="200">
-</div>
+<h1>App Component</h1>
 
 <h1 [style.background-color]="bgColor">Hello, {{ name }}</h1>
 <h2 [style]="styleString">Personal details as following:</h2>
 
-
-<ul>
-  <li>Name: {{ person.name }}</li>
-  <li>{{ 'Age: ' + person.age }}</li>
-  <li>{{ 'City: ' + person.city }}</li>
-</ul>
-
-<app-user></app-user>
-
+<div class="container mt-3">
+  <h2>Card Image</h2>
+  <p>Image at the top (card-img-top):</p>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" [src]="imageUrl" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{ person.name }}</h4>
+      <p class="card-text">{{ 'Age: ' + person.age + ', City: ' + person.city }}</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+</div>
 
 @for (p of personList; track p.name) {
-  <li>{{ p.name }}</li>
-  <li>{{ p.age }}</li>
-  <li>{{ p.city }}</li>
+  <li>Name: {{ p.name +  ', Age: ' + p.age + ', City: ' + p.city }}</li>
 } @empty {
   <li>There are no persons on the list.</li>
 }
 
 <p [ngClass]="{ 'bg-green': !isDisabled, 'bg-yellow': isDisabled }">This is my paragraph.</p>
 
+<p>The cost of this items is {{ cost | currency:'CAD' }}</p>
+<p>The current date and time is {{ date | date:'medium' }}</p>
+
 <!-- Event binding example -->
-<button [ngClass]="bgGreenClass" disabled="{{isDisabled}}" [ngClass]=" true ? 'disabled': '' ">Disabled Button</button>
+<button class="btn btn-primary" [ngClass]="bgGreenClass" disabled="{{isDisabled}}" [ngClass]=" true ? 'disabled': '' ">Disabled Button</button>
 <!-- Property binding example -->
 <button [disabled]="isDisabled">Disabled Button</button>
  <!-- we add () to make it an event -->
 <button (click)="isDisabled = !isDisabled">Toggle Disabled State</button>
 
 <button (click)="showMessage()">Show Message</button>
+
+
+<app-user></app-user>
 
 <router-outlet />

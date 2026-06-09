@@ -1,0 +1,9 @@
+<h1>Student List</h1>
+
+@for (student of studentList; track student.name) {
+  <div>
+    <p>{{ ' Name: ' + student.name + ' Age: ' + student.age + ' City: ' + student.city }}</p>
+  </div>
+} @empty {
+  <p>There are no students on the list.</p>
+}

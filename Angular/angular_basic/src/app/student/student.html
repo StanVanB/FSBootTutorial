@@ -1,0 +1,11 @@
+<h2>Student Component</h2>
+
+<ul>
+    @for (student of studentList; track student.name) {
+        <li>
+            Name: {{ student.name }}, Age: {{ student.age }}, City: {{ student.city }}
+        </li>
+    } @empty {
+        <li>There are no students on the list.</li>
+    }
+</ul>

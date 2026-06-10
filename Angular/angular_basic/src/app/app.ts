@@ -2,13 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Person } from '../interfaces/person';
 import {CommonModule} from '@angular/common';
-import { User } from './user/user';
 import { UserService } from './services/user-service';
 import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, User, Navbar],
+  imports: [RouterOutlet, CommonModule, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

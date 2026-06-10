@@ -1,0 +1,33 @@
+<h1>Template driven form example</h1>
+
+<form #signInForm="ngForm" (ngSubmit)="signIn(signInForm)">
+    <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" placeholder="Enter email" [(ngModel)]="customer.email" name="email" #emailVal="ngModel" required>
+        @if(emailVal.invalid && emailVal.touched){
+            <div class="text-danger">Email is required.</div>
+        }
+
+    </div>
+    <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter password" [(ngModel)]="customer.password" name="password" minlength="6" #passVal="ngModel" required>
+        @if(passVal.hasError('minlength') && passVal.touched){
+            <div class="text-danger">Password must be at least 6 characters long.</div>
+        }
+        @if(passVal.hasError('required') && passVal.touched){
+            <div class="text-danger">Password is required.</div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+</form>
+
+Email:
+<br>Valid: {{emailVal.valid}}
+<br>Invalid: {{emailVal.invalid}}
+<br>Touched: {{emailVal.touched}}
+<br>Untouched: {{emailVal.untouched}}
+
+<br>Form Value: {{signInForm.value | json }}
+<br>Email Errors: {{emailVal.errors | json }}
+<br>Password Errors: {{passVal.errors | json }}

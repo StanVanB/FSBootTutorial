@@ -1,0 +1,66 @@
+<h1>Reactive Forms Example: Sign Up Form</h1>
+<form [formGroup]="signUpForm">
+    <div class="mb-3 mt-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" formControlName="username" />
+        @if (signUpForm.get('username')?.invalid && signUpForm.get('username')?.touched) {
+        <div class="text-danger">
+            @if (signUpForm.get('username')?.errors?.['required']) {
+            <p>Username is required.</p>
+            } @else if (signUpForm.get('username')?.errors?.['minlength']) {
+            <p>Username must be at least 3 characters long.</p>
+            }
+        </div>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" formControlName="email" />
+        @if (signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched) {
+        <div class="text-danger">
+            @if (signUpForm.get('email')?.errors?.['required']) {
+            <p>Email is required.</p>
+            } @else if (signUpForm.get('email')?.errors?.['email']) {
+            <p>Please enter a valid email address.</p>
+            }
+        </div>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" formControlName="password" />
+        @if (signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched) {
+        <div class="text-danger">
+            @if (signUpForm.get('password')?.errors?.['required']) {
+            <p>Password is required.</p>
+            } @else if (signUpForm.get('password')?.errors?.['minlength']) {
+            <p>Password must be at least 6 characters long.</p>
+            } @else if (signUpForm.get('password')?.errors?.['passwordInvalid']) {
+            <p>Password cannot contain the word "password".</p>
+            }
+        </div>
+        }
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" />
+        @if (signUpForm.get('confirmPassword')?.invalid && signUpForm.get('confirmPassword')?.touched) {
+        <div class="text-danger">
+            @if (signUpForm.get('confirmPassword')?.errors?.['required']) {
+            <p>Confirm Password is required.</p>
+            } @else if (signUpForm.get('confirmPassword')?.errors?.['minlength']) {
+            <p>Confirm Password must be at least 6 characters long.</p>
+            }
+        </div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+
+{{signUpForm.value | json}}
+<br>
+{{signUpForm.get('username')?.errors | json}}
+<br>
+{{signUpForm.get('email')?.errors | json}}
+{{signUpForm.get('password')?.errors | json}}
+{{signUpForm.get('confirmPassword')?.errors | json}}

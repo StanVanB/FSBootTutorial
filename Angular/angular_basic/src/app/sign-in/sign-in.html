@@ -19,10 +19,13 @@
             <div class="text-danger">Password is required.</div>
         }
     </div>
-    <button type="submit" class="btn btn-primary">Sign In</button>
+    
+    <button type="submit" class="btn btn-primary ms-4">Sign In</button>
+    <button (click)="redirectToSignup()" class="btn btn-warning ms-4">Sign Up</button>
 </form>
 
 Email:
+
 <br>Valid: {{emailVal.valid}}
 <br>Invalid: {{emailVal.invalid}}
 <br>Touched: {{emailVal.touched}}

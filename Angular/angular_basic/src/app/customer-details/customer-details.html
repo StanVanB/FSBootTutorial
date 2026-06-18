@@ -1,0 +1,22 @@
+<div class="container mt-3">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (customers$ | async; as customer) {
+        @for (cus of customer; track cus.customer_id) {
+        <tr>
+            <td>{{ cus.customer_name }}</td>
+            <td>{{ cus.customer_email }}</td>
+            <td>{{ cus.age }}</td>
+        </tr>
+        }
+        }
+    </tbody>
+</table>
+</div>

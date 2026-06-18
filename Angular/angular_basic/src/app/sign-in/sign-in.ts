@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { JsonPipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -15,12 +16,19 @@ export class SignIn {
     password: ''
   };
 
+  // constructor(private router: Router) {}
+  router = inject(Router);
+
   signIn(formValue:any): void {
     if(formValue.valid) {
       console.log('Form Submitted!', this.customer);
     } else {
       console.log('Form is invalid');
     }
+  }
+
+  redirectToSignup(): void {
+    this.router.navigate(['/sign-up']);
   }
 
 }

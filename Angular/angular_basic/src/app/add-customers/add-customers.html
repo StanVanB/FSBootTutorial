@@ -1,0 +1,17 @@
+<div class="container">
+    <form #customerForm="ngForm" class="mt-3" (ngSubmit)="addCustomer(customerForm.value)">
+        <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input type="text" class="form-control" id="customerName" [(ngModel)]="customer.customer_name" name="customer_name">
+        </div>
+        <div class="mb-3">
+            <label for="customerEmail" class="form-label">Customer Email</label>
+            <input type="email" class="form-control" id="customerEmail" [(ngModel)]="customer.customer_email" name="customer_email">
+        </div>
+        <div class="mb-3">
+            <label for="customerAge" class="form-label">Customer Age</label>
+            <input type="number" class="form-control" id="customerAge" [(ngModel)]="customer.age" name="age">
+        </div>
+        <button type="submit" class="btn btn-primary">Add Customer</button>
+    </form>
+</div>

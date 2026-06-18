@@ -1,0 +1,18 @@
+<div>
+  <h2>Update Customer</h2>
+  <form>
+    <div>
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" [(ngModel)]="customer.customer_name" name="customer_name">
+    </div>
+    <div>
+      <label for="customerEmail">Customer Email:</label>
+      <input type="email" id="customerEmail" [(ngModel)]="customer.customer_email" name="customer_email">
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" [(ngModel)]="customer.age" name="age">
+    </div>
+    <button type="submit" (click)="updateCustomer(customer)">Update Customer</button>
+  </form>
+</div>

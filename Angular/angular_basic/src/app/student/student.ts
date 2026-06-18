@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Person } from '../../interfaces/person';
 import { UserService } from '../services/user-service';
 
 @Component({
   selector: 'app-student',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './student.html',
   styleUrl: './student.css',
 })

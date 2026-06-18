@@ -1,0 +1,15 @@
+<article>
+    <img [src]="houseInfo.photo" alt="Photo of {{ houseInfo.name }}" class="details-photo">
+    <section class="listing-description">
+        <h2 class="listing-heading">{{ houseInfo.name }}</h2>
+        <p class="listing-location">{{ houseInfo.city }}, {{ houseInfo.state }}</p>
+    </section>
+    <section class="listing-features">
+        <h2 class="section-heading">More info about the {{ houseInfo.name }}</h2>
+        <ul>
+            <li>{{ houseInfo.availableUnits}}</li>
+            <li>{{ houseInfo.wifi }}</li>
+            <li>{{ houseInfo.laundry }}</li>
+        </ul>
+    </section>
+</article>

@@ -1,0 +1,56 @@
+<div class="container">
+
+  <h1>App Component</h1>
+
+  <h1 [style.background-color]="bgColor">Hello, {{ name }}</h1>
+  <h2 [style]="styleString">Personal details as following:</h2>
+
+  <div class="container mt-3">
+    <h2>Card Image</h2>
+    <p>Image at the top (card-img-top):</p>
+    <div class="card" style="width:400px">
+      <img class="card-img-top" [src]="imageUrl" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{ person.name }}</h4>
+        <p class="card-text">{{ 'Age: ' + person.age + ', City: ' + person.city }}</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-row">
+
+    @for (person of personList; track person.name) {
+    <div class="mt-3">
+      <h2>Card Image</h2>
+      <p>Image at the top (card-img-top):</p>
+      <div class="card" style="width:400px">
+        <img class="card-img-top" [src]="imageUrl" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{ person.name }}</h4>
+          <p class="card-text">{{ 'Age: ' + person.age + ', City: ' + person.city }}</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+    } @empty {
+    <p>There are no persons on the list.</p>
+    }
+  </div>
+
+  <p [ngClass]="{ 'bg-green': !isDisabled, 'bg-yellow': isDisabled }">This is my paragraph.</p>
+
+  <p>The cost of this items is {{ cost | currency:'CAD' }}</p>
+  <p>The current date and time is {{ date | date:'medium' }}</p>
+
+  <!-- Event binding example -->
+  <button class="btn btn-primary" [ngClass]="bgGreenClass" disabled="{{isDisabled}}"
+    [ngClass]=" true ? 'disabled': '' ">Disabled Button</button>
+  <!-- Property binding example -->
+  <button [disabled]="isDisabled">Disabled Button</button>
+  <!-- we add () to make it an event -->
+  <button (click)="isDisabled = !isDisabled">Toggle Disabled State</button>
+
+  <button (click)="showMessage()">Show Message</button>
+
+</div>

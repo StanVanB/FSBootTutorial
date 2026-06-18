@@ -1,0 +1,70 @@
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m
+[1m[33m[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNG8113: Students is not used within the template of User[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/user/user.ts:11:25:
+[37m      11 │   imports: [FormsModule, [32mStudents[37m, UserDetails],
+         ╵                          [32m~~~~~~~~[0m
+
+[39m[22m

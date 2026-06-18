@@ -1,0 +1,32 @@
+<div class="container mt-3">
+    <button class="btn btn-primary mb-3" [routerLink]="['/add-customer']">Add Customer</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (customers$ | async; as customer) {
+        @for (cus of customer; track cus.customer_id) {
+        <tr>
+            <td>
+                <a [routerLink]="['/customers', cus.customer_id]" class="btn btn-link">
+                    {{ cus.customer_name }}
+                </a>
+            </td>
+            <td>{{ cus.customer_email }}</td>
+            <td>{{ cus.age }}</td>
+            <td>
+                <button class="btn btn-warning" [routerLink]="['/edit-customer', cus.customer_id]">Edit</button>
+                <button class="btn btn-danger" (click)="deleteCustomer(cus.customer_id)">Delete</button>
+            </td>
+        </tr>
+        }
+        }
+    </tbody>
+</table>
+</div>

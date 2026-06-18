@@ -1,11 +1,11 @@
-<h2>Student Component</h2>
+<div class="container">
+  <h1>Student List</h1>
 
-<ul>
-    @for (student of studentList; track student.name) {
-        <li>
-            Name: {{ student.name }}, Age: {{ student.age }}, City: {{ student.city }}
-        </li>
-    } @empty {
-        <li>There are no students on the list.</li>
-    }
-</ul>
+  @for (student of studentList; track student.id) {
+    <div>
+      <a [routerLink]="['/user', student.id]">{{ student.name }}</a>
+    </div>
+  } @empty {
+    <p>There are no students on the list.</p>
+  }
+</div>

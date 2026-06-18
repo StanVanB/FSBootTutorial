@@ -1,0 +1,16 @@
+<h1>User Details Component</h1>
+<p>Child User Name: {{ childUserName }}</p>
+
+<input type="text" [value]="childUserName" #inputVal>
+<button (click)="sendUserName(inputVal.value)">Update Name</button>
+
+@if(childUserList.length > 0) {
+  <h2>Child User List:</h2>
+  <ul>
+    @for (p of childUserList; track p.name) {
+      <li>{{ ' Name: ' + p.name + ' Age: ' + p.age + ' City: ' + p.city }}</li>
+    }
+  </ul>
+} @else {
+  <p>There are no users on the list.</p>
+}

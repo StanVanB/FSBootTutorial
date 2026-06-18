@@ -54,13 +54,12 @@
         </div>
         }
     </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="btn btn-primary ms-4">Sign Up</button>
+    <button (click)="redirectToSignin()" class="btn btn-warning ms-4">Sign In</button>
 </form>
 
 {{signUpForm.value | json}}
 <br>
-{{signUpForm.get('username')?.errors | json}}
-<br>
-{{signUpForm.get('email')?.errors | json}}
+<!-- {{signUpForm.get('email')?.errors | json}} -->
 {{signUpForm.get('password')?.errors | json}}
-{{signUpForm.get('confirmPassword')?.errors | json}}
+<!-- {{signUpForm.get('confirmPassword')?.errors | json}} -->
